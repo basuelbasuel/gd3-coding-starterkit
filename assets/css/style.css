@@ -1,3 +1,281 @@
 body {
-  font-family: "ABCRepro-Medium", Helvetica, Arial, sans-serif;
+
+font-family: "AntiqueLegacy-Regular";  
+/* font-family: "ABCRepro-Medium", Helvetica, Arial, sans-serif; */
+  display: flex;
+}
+
+div.content{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+div.scene{
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  height: 100%;
+}
+
+div.titelScene{
+  height: 100%;
+  width: 2500px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 100); /* Black layer with opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s; /* Add transition for smooth effect */
+}
+
+.overlayEnd {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 100); /* Black layer with opacity */
+  opacity: 0;
+  z-index: 4;
+}
+
+.t {
+  top: 50px;
+  font-size: 50px;
+  color: white;
+}
+.ut {
+  font-size: 24px;
+  color: white;
+}
+
+
+div.innerHorizon{
+  height: 48%;
+  width: 100%;
+}
+
+div.innerHorizonText{
+  height: 48%;
+  width: 1500px;
+}
+
+
+/* ROWS */
+
+div.innerRow1 {
+  height: 11%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+div.innerRow1 > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 5px;
+  filter: noise(0.5);
+}
+
+div.innerRow1_1{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+div.innerRow1_1 > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+div.innerRow2 {
+  height: 17%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+div.innerRow2 > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+div.innerRow2_1{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+div.innerRow2_1 > div{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+}
+
+div.innerRow3{
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  gap: 20px;
+  background-color: var(--custom-color);
+  height: 24%;
+  width: 100%;
+}
+
+
+/* TEXT */
+
+p.top {
+  text-align: justify;
+}
+
+p.bot{
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.textBox{
+  width: 600px;
+  filter: blur(0.65px);
+}
+
+#innerRow3Text{
+  align-items: flex-start;
+}
+
+#innerRow2Text{
+  align-items: flex-end;
+}
+
+#innerRow1Text{
+  justify-content: center;
+}
+
+
+/* HOUSES */
+
+div.housesR3{
+  height: 250px;
+  width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  flex-shrink: 0;
+  background-color: black;
+}
+
+div.housesR2{
+  height: 170px;
+  width: 170px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  flex-shrink: 0;
+  background-color: grey;
+}
+
+div.housesR1{
+  height: 100px;
+  width: 100px;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-end;
+  flex-shrink: 0;
+  background-color: lightgrey;
+}
+
+/* PADDING */
+
+div.paddingR1{
+  flex-shrink: 0;
+}
+
+div.paddingR2{
+  flex-shrink: 0;
+}
+
+
+/* STRIPES */
+
+div.stripeContainer{
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background-color: rgb(255, 255, 255);
+}
+
+div.stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: red; /* Default color */
+}
+
+/* NOISE BACKGROUND */
+
+.waterSky {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  opacity: 1;
+  z-index: 0;
+ background: linear-gradient(rgba(0,212,255,1) 75%, rgba(9,9,121,1) 76.5%, rgba(9,9,121,1) 82%); 
+}
+.sand {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  width: 100%;
+  height: 50%;
+  opacity: 1;
+  z-index: -3;
+  background-color: rgba(255,222,150,1);
+}
+.noiseFilter {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/noiseAlpha.png);
+  opacity: 0.5;
+  filter: contrast(150%) brightness(1000%);
+  z-index: -1;
+}
+
+.houseScene {
+  z-index: 1;
 }

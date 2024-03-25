@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "ABCRepro-Medium";
+  font-family: "AntiqueLegacy-Regular";
   font-weight: normal;
   font-style: normal;
   font-display: auto;
-  src: url("../fonts/ABCRepro-Medium-Trial.woff") format("woff"), url("../fonts/ABCRepro-Medium-Trial.woff2") format("woff2");
+  src: url("../fonts/AntiqueLegacy-Regular.woff") format("woff"), url("../fonts/AntiqueLegacy-Regular.woff2") format("woff2");
 }
